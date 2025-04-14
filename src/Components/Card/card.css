@@ -1,5 +1,67 @@
-#cardContent {
+.charCard {
+    width: 300px;
+    height: 600px;
+    background-color: #2C2F33;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    justify-content: space-between;
+    text-decoration: none;
+    overflow: visible;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: visible;
+    border-bottom: 1px solid #444;
+    background-image: url('https://web.dragonball-api.com/images-compress/89980.webp');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.characterImage {
+    height: 100%;
+    max-height: 380px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    position: relative; 
+    top: unset; 
+}
+
+.imageContainer:hover .characterImage {
+    transform: scale(1.1); /* más suave para evitar que se vea gigante */
+}
+
+.contentContainer {
+    padding: 70px;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.characterName {
+
+    font-weight: bold;
+    color: white;
+    margin: 8px 0;
+    text-decoration: none;
+}
+
+.characterSpecies {
+    color: #FFD700;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
 }

@@ -1,8 +1,10 @@
-
 import './App.css'
 import Header from "./Components/Header/header";
-import CharacterCard from './Components/Card/card';
+import Card from './Components/Card/card';
 import Pagination from '@mui/material/Pagination';
+import Navbar from "./Components/NavBar/Navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { useState, useEffect } from 'react';
 
 
@@ -32,26 +34,28 @@ function App() {
 
   return (
     <>
-
+      <Navbar>
+      
+      </Navbar>
       <Header />
-      <main style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(345px, 1fr))',
-        gap: '1rem',
-        padding: '1rem',
-        backgroundColor: '#f3f4f6'
-      }}>
+      <main
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '32px',
+          padding: '32px',
+          justifyItems: 'center',
+          backgroundColor: '#1f1f25'
+        }}
+      >
         {arrayObjects.map((item) => (
-          <CharacterCard
+          <Card
             key={item.id}
-            name={item.name}
-            image={item.image}
-            race={item.race}
-            gender={item.gender}
-            ki={item.ki}
-            maxKi={item.maxKi}
-            affiliation={item.affiliation}
+            nombre={item.name}
+            img={item.image}
+            especie={item.race}
           />
+
         ))}
       </main>
 
