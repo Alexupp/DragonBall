@@ -1,0 +1,87 @@
+.acerca-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.acerca-card {
+    max-width: 720px;
+    width: 100%;
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    padding: 28px;
+}
+
+.acerca-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.acerca-avatar {
+    width: 160px !important;
+    height: 160px !important;
+    margin-bottom: 16px;
+    border: 4px solid #2196f3;
+    box-shadow: 0 0 18px rgba(33, 150, 243, 0.6);
+}
+
+.acerca-text {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #cccccc;
+}
+
+.acerca-subtitulo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #64b5f6;
+}
+
+.acerca-subtitulo-secundario {
+    color: #aaaaaa !important;
+    margin-top: 4px;
+}
+
+.acerca-chips {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.acerca-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.acerca-contacto a {
+    color: #90caf9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.acerca-contacto a:hover {
+    color: #ffffff;
+}
+
+.acerca-footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.acerca-divider {
+    margin: 24px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}

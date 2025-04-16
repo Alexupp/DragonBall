@@ -1,26 +1,30 @@
 import * as React from 'react';
-import { Box, Typography, Stack } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 import "./card.css";
 
-const Card = (props) => {
+const Card = ({ id, nombre, img, especie }) => {
+    console.log("Card props:", id, nombre); // 👈 agregá esto
     return (
-        <Box className="charCard">
-            <Box className="imageContainer">
-                <img
-                    className="characterImage"
-                    src={props.img}
-                    alt={props.nombre}
-                />
+        <Link to={`/personaje/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Box className="charCard">
+                <Box className="imageContainer">
+                    <img
+                        className="characterImage"
+                        src={img}
+                        alt={nombre}
+                    />
+                </Box>
+                <Box className="contentContainer">
+                    <Typography variant="h5" className="characterName">
+                        {nombre}
+                    </Typography>
+                    <Typography variant="body1" className="characterSpecies">
+                        {especie}
+                    </Typography>
+                </Box>
             </Box>
-            <Box className="contentContainer">
-                <Typography variant="h5" className="characterName ">
-                    {props.nombre}
-                </Typography>
-                <Typography variant="body1" className="characterSpecies">
-                    {props.especie}
-                </Typography>
-            </Box>
-        </Box>
+        </Link>
     );
 };
 

@@ -3,14 +3,12 @@ import Header from "../../Components/Header/header";
 import Card from "../../Components/Card/card";
 import Pagination from '@mui/material/Pagination';
 import Navbar from '../../Components/NavBar/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 
-
-function App() {
-    const [arrayObjects, setArrayObjects] = useState([])
-    const [totalPages, setTotalPages] = useState(1)
+function HomePage() {
+    const [arrayObjects, setArrayObjects] = useState([]);
+    const [totalPages, setTotalPages] = useState(1);
 
     useEffect(() => {
         fetch('https://dragonball-api.com/api/characters')
@@ -21,7 +19,6 @@ function App() {
             });
     }, []);
 
-
     const handlePagination = (event, page) => {
         fetch(`https://dragonball-api.com/api/characters?page=${page}`)
             .then(response => response.json())
@@ -31,12 +28,9 @@ function App() {
             });
     };
 
-
     return (
         <>
-            <Navbar>
-
-            </Navbar>
+            <Navbar />
             <Header />
             <main
                 style={{
@@ -48,22 +42,26 @@ function App() {
                     backgroundColor: '#1f1f25'
                 }}
             >
-                {arrayObjects.map((item) => (
-                    <Card
-                        key={item.id}
-                        nombre={item.name}
-                        img={item.image}
-                        especie={item.race}
-                    />
+                {arrayObjects.map((item) => {
+                    console.log("Item:", item);
+                    return (
+                        <Card
+                            key={item.id}
+                            id={item.id}
+                            nombre={item.name}
+                            img={item.image}
+                            especie={item.race}
+                        />
+                    );
+                })}
 
-                ))}
             </main>
 
             <div id="pagination">
                 <Pagination onChange={handlePagination} count={totalPages} variant="outlined" shape="rounded" />
             </div>
         </>
-    )
+    );
 }
 
-export default App
+export default HomePage;

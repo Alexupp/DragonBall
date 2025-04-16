@@ -48,11 +48,12 @@ function App() {
             >
                 {arrayObjects.map((item) => (
                     <Card
-                        key={item.id}
+                        id={item.id} // ✅ este es el fix importante
                         nombre={item.name}
                         img={item.image}
                         especie={item.race}
                     />
+
                 ))}
             </main>
 

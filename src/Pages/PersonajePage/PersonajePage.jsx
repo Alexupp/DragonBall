@@ -2,49 +2,49 @@ import "./PersonajePage.css";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import Card from "../../Components/Card/card";
-
-const CharacterPage = () => {
-    const [data, setData] = useState([]);
-
-    let { races } = useParams();
+const PersonajePage = () => {
+    const { id } = useParams();
+    const [personaje, setPersonaje] = useState(null);
 
     useEffect(() => {
-        fetch(`https://dragonball-api.com/api/characters?limit=100`)
-            .then((response) => response.json())
-            .then((char) => setData(char.items))
-            .catch((error) => console.error("Error fetching data:", error));
-    }, []);
+        if (!id) return;
 
-    let tmp = null;
-    if (races === "not human") {
-        tmp = data.filter((elem) => elem.race !== "Human");
-    } else {
-        tmp = data.filter((elem) => elem.race === races);
+        console.log("ID recibido por useParams:", id);
+        console.log(`Cargando personaje con ID: ${id}`);
+        
+        fetch(`https://dragonball-api.com/api/characters/${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("Respuesta de la API:", data);
+                setPersonaje(data); // ✅ fix acá
+            })
+            .catch((err) => console.error("Error al cargar personaje:", err));
+    }, [id]);
+
+    if (!personaje) {
+        console.log("personaje aún no cargado:", personaje);
+        return <p>Cargando personaje...</p>;
     }
 
+    console.log("Renderizando personaje:", personaje);
+
     return (
-        <main id="character-page">
-            <h1 id="title-character">CHARACTER</h1>
-            <div id="characters-species">
-                {tmp.map((element) => (
-                    <div key={element.id}>
-                        <Link to={"/details/" + element.id}>
-                            <Card
-                                img={element.image}
-                                nombre={element.name}
-                                especie={element.race}
-                                genero={element.gender}
-                                baseKi={element.ki}
-                                totalKi={element.maxKi}
-                                affiliation={element.affiliation}
-                            />
-                        </Link>
-                    </div>
-                ))}
+        <main className="personaje-detalle">
+            <div className="card-personaje">
+                <img src={personaje.image} alt={personaje.name} />
+                <div className="card-content">
+                    <h1>{personaje.name}</h1>
+                    <p><strong>Raza:</strong> {personaje.race}</p>
+                    <p><strong>Género:</strong> {personaje.gender}</p>
+                    <p><strong>Ki Base:</strong> {personaje.ki}</p>
+                    <p><strong>Ki Máximo:</strong> {personaje.maxKi}</p>
+                    <p><strong>Afiliación:</strong> {personaje.affiliation}</p>
+                    <Link className="back-link" to="/">← Volver</Link>
+                </div>
             </div>
         </main>
     );
+    
 };
 
-export default CharacterPage;
+export default PersonajePage;
