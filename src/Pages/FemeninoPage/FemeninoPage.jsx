@@ -3,6 +3,7 @@ import Header from "../../Components/Header/header";
 import Card from '../../Components/Card/card';
 import Navbar from "../../Components/NavBar/Navbar";
 import { useState, useEffect } from 'react';
+import Footer from "../../Components/Footer/Footer";
 
 function FemeninoPage() {
     const [arrayObjects, setArrayObjects] = useState([])
@@ -43,6 +44,7 @@ function FemeninoPage() {
 
                 ))}
             </main>
+            <Footer />
         </>
     )
 }

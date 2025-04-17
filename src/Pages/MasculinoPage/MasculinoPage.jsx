@@ -3,8 +3,8 @@ import Header from "../../Components/Header/header";
 import Card from '../../Components/Card/card';
 import Pagination from '@mui/material/Pagination';
 import Navbar from "../../Components/NavBar/Navbar";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Footer from "../../Components/Footer/Footer";
 
 function App() {
     const [arrayObjects, setArrayObjects] = useState([])
@@ -60,6 +60,7 @@ function App() {
             <div id="pagination">
                 <Pagination onChange={handlePagination} count={totalPages} variant="outlined" shape="rounded" />
             </div>
+            <Footer />
         </>
     )
 }

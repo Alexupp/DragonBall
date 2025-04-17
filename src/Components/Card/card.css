@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
 .charCard {
     width: 300px;
     height: 600px;
@@ -32,13 +34,13 @@
     max-height: 380px;
     width: auto;
     object-fit: contain;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
     position: relative; 
     top: unset; 
 }
 
 .imageContainer:hover .characterImage {
-    transform: scale(1.1); /* más suave para evitar que se vea gigante */
+    transform: scale(1.1);
 }
 
 .contentContainer {
@@ -48,18 +50,28 @@
 }
 
 .characterName {
-
-    font-weight: bold;
-    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.6);
     margin: 8px 0;
-    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .characterSpecies {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     color: #FFD700;
-    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.5);
     margin-bottom: 12px;
-    text-decoration: none;
+}
+
+.charCard:hover .characterName {
+    transform: scale(1.2);
 }
 
 img {

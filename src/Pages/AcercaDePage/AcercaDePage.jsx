@@ -2,6 +2,7 @@ import './AcercaDePage.css';
 import Navbar from '../../Components/NavBar/Navbar';
 import { Container, Typography, Card, CardContent, Avatar, Chip, Box, Stack, Link, Divider } from '@mui/material';
 import { GitHub, Instagram, Email } from '@mui/icons-material';
+import Footer from '../../Components/Footer/Footer';
 
 function AcercaPage() {
     return (
@@ -63,8 +64,10 @@ function AcercaPage() {
                         </Typography>
                     </CardContent>
                 </Card>
-            </Container>
-        </>
+            </Container> 
+            <Footer />
+            </>
+        
     );
 }
 

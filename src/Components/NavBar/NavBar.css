@@ -37,3 +37,17 @@
     background-color: #1f1f1f;
     color: #ffffff;
 }
+
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    object-fit: contain;
+}

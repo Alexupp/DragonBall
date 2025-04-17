@@ -3,6 +3,8 @@ import Header from "../../Components/Header/header";
 import Card from "../../Components/Card/card";
 import Pagination from '@mui/material/Pagination';
 import Navbar from '../../Components/NavBar/Navbar';
+import Footer from '../../Components/Footer/Footer';
+
 
 import { useState, useEffect } from 'react';
 
@@ -60,6 +62,8 @@ function HomePage() {
             <div id="pagination">
                 <Pagination onChange={handlePagination} count={totalPages} variant="outlined" shape="rounded" />
             </div>
+
+            <Footer />
         </>
     );
 }

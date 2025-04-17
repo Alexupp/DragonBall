@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import { AppBar, Toolbar, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom'; 
 import './NavBar.css';
 
@@ -7,9 +7,9 @@ const Navbar = () => {
     return (
         <AppBar position="static" className="navbar">
             <Toolbar className="navbar-toolbar">
-                <Typography variant="h6" className="navbar-title">
-                    Dragon Ball API
-                </Typography>
+                <Link to="/" className="navbar-logo-container">
+                    <img src="/icono_navbar.webp" alt="Logo Dragon Ball" className="navbar-logo" />
+                </Link>
                 <Box className="navbar-buttons">
                     <Button component={Link} to="/" className="navbar-button">Inicio</Button>
                     <Button component={Link} to="/masculino" className="navbar-button">Masculino</Button>
