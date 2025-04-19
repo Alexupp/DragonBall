@@ -2,7 +2,7 @@ import "./PersonajePage.css";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../../Components/Footer/Footer";
-import Navbar from '../../Components/NavBar/Navbar';
+import Navbar from '@components/NavBar/Navbar';
 
 const PersonajePage = () => {
     const { id } = useParams();
