@@ -18,7 +18,7 @@ function AcercaPage() {
                                 className="acerca-avatar"
                             />
                             <Typography variant="h4" component="h2">
-                                Alexander Pérez Correa
+                            ☯ Alexander Pérez Correa ☯
                             </Typography>
                             <Typography variant="subtitle1" className="acerca-subtitulo-secundario">
                                 Desarrollador Frontend | Estudiante de Ingeniería de Sistemas
@@ -28,7 +28,7 @@ function AcercaPage() {
                         <Divider className="acerca-divider" />
 
                         <Typography variant="body1" className="acerca-text">
-                            ¡Hola! Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo. Este proyecto fue desarrollado con React y la API de Dragon Ball. Me especializo en crear interfaces intuitivas y modernas. 💻
+                            ¡Hola! Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo, soy de Florencia - Caquetá, tengo 22 años, actualmente me encuentro cursando el octavo semestre de ingenieria de sistemas en la Universidad de la amazonia. Este proyecto fue desarrollado con React y la API de Dragon Ball. Me especializo en crear interfaces intuitivas y modernas. 💻
                         </Typography>
 
                         <Divider className="acerca-divider" />
@@ -38,8 +38,8 @@ function AcercaPage() {
                             <Chip label="React" color="primary" />
                             <Chip label="JavaScript" color="success" />
                             <Chip label="HTML/CSS" color="secondary" />
-                            <Chip label="Git & GitHub" color="default" />
-                            <Chip label="API REST" color="info" />
+                            <Chip label="Git & GitHub" color='primary' />
+                            <Chip label="API REST" color='success' />
                         </Stack>
 
                         <Divider className="acerca-divider" />

@@ -18,10 +18,21 @@ main {
     gap: 30px;
 }
 
-#pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    background-color: #282B32;
+@media (max-width: 768px) {
+    main {
+        justify-content: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        justify-content: center;
+    }
+
+    main > * {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }

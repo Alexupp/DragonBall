@@ -1,14 +1,10 @@
 import "./Footer.css";
-import { FaGithub, FaInstagram, FaHeart } from "react-icons/fa"; // Cambiado FaLinkedin por FaInstagram
+import { FaGithub, FaInstagram, FaHeart } from "react-icons/fa";
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div class="footer-stats">
-                <span>CHARACTERS: 58</span>
-                <span>TRANSFORMATIONS: 49</span>
-                <span>PLANETS: 20</span>
-            </div>
+          
             <div class="footer-line"></div>
 
             <p className="server-status">

@@ -14,6 +14,7 @@
     justify-content: space-between;
     text-decoration: none;
     overflow: visible;
+    transition: transform 0.1s ease, opacity 0.9s ease;
 }
 
 .imageContainer {
@@ -76,4 +77,63 @@
 
 img {
     height: 100%;
+}
+
+
+/* --- Reglas responsivas --- */
+
+@media (max-width: 768px) {
+    .charCard {
+        width: 80%;
+        height: auto; 
+        margin: 10px auto; 
+    }
+
+    .imageContainer {
+        height: 300px;
+    }
+
+    .characterImage {
+        max-height: 250px;
+    }
+
+    .contentContainer {
+        padding: 30px;
+    }
+
+    .characterName {
+        font-size: 22px; 
+    }
+
+    .characterSpecies {
+        font-size: 16px; 
+    }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+    .charCard {
+        width: 300px; 
+        margin: 10px auto; 
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+
+    .characterImage {
+        max-height: 200px;
+    }
+
+    .contentContainer {
+        padding: 20px;
+    }
+
+    .characterName {
+        font-size: 18px;
+    }
+
+    .characterSpecies {
+        font-size: 14px;
+    }
 }

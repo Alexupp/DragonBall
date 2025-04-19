@@ -34,6 +34,7 @@ const PersonajePage = () => {
         <>
             <Navbar />
             <main className="personaje-detalle">
+                <h2>☯ Estilo Base ☯</h2>
                 <div className="card-personaje">
                     <div className="imagen-fondo-container">
                         <img src={personaje.image} alt={personaje.name} />
@@ -51,8 +52,11 @@ const PersonajePage = () => {
 
                 {/* Card para las transformaciones */}
                 {personaje.transformations && personaje.transformations.length > 0 && (
-                    <div className={`card-transformaciones ${personaje.name === "Goku" ? "transformaciones-goku" : ""}`}>
-                        <h2>- - Transformaciones - -</h2>
+                    <div className={`card-transformaciones 
+                        ${personaje.name === "Goku" ? "transformaciones-goku" : ""}
+                        ${personaje.name === "Vegeta" ? "transformaciones-vegeta" : ""}
+                    `}>
+                        <h2>🐉 Transformaciones 🐉</h2>
                         <div className="transformaciones-grid">
                             {personaje.transformations.map((trans) => (
                                 <div key={trans.id} className="card-transformacion">

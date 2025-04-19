@@ -25,3 +25,30 @@ main {
     padding: 30px;
     background-color: #282B32;
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    #pagination {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        justify-content: center;
+    }
+
+    main > * {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #pagination {
+        padding: 15px;
+    }
+}
