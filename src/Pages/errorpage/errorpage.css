@@ -45,3 +45,33 @@
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .not-found-title {
+        font-size: 2rem;
+    }
+
+    .not-found-text {
+        font-size: 1rem;
+    }
+
+    .back-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found-title {
+        font-size: 1.75rem;
+    }
+
+    .not-found-text {
+        font-size: 0.95rem;
+    }
+
+    .back-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
