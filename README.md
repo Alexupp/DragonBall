@@ -44,9 +44,9 @@ src/
 │   ├── MasculinoPage/
 │   │   ├── MasculinoPage.css
 │   │   └── MasculinoPage.jsx
-│   │── NotFoundPage/
-│   │   ├── NotFoundPage.css
-│   │   └── NotFoundPage.jsx
+│   │── errorpage/
+│   │   ├── errorpage.css
+│   │   └── errorpage.jsx
 │   │
 │   └── PersonajePage/
 │       ├── PersonajePage.css
