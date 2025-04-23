@@ -8,6 +8,7 @@ import AcercaPage from './Pages/AcercaDePage/AcercaDePage';
 import PersonajePage from './Pages/PersonajePage/PersonajePage';
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
+
 function App() {
   return (
     <Router>
