@@ -1,5 +1,4 @@
-
-import "./notfoundpage.css";
+import "./errorpage.css";
 import { useNavigate } from 'react-router-dom';
 
 function NotFoundPage() {

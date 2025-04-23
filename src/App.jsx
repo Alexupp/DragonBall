@@ -1,13 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import NotFoundPage from './Pages/notfoundpage/notfoundpage';
 import HomePage from './Pages/HomePage/HomePage';
 import MasculinoPage from './Pages/MasculinoPage/MasculinoPage';
 import FemeninoPage from './Pages/FemeninoPage/FemeninoPage';
 import AcercaPage from './Pages/AcercaDePage/AcercaDePage';
 import PersonajePage from './Pages/PersonajePage/PersonajePage';
-
+import NotFoundPage from './Pages/errorpage/errorpage';
 
 function App() {
   return (
