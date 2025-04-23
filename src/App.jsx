@@ -6,7 +6,7 @@ import MasculinoPage from './Pages/MasculinoPage/MasculinoPage';
 import FemeninoPage from './Pages/FemeninoPage/FemeninoPage';
 import AcercaPage from './Pages/AcercaDePage/AcercaDePage';
 import PersonajePage from './Pages/PersonajePage/PersonajePage';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
